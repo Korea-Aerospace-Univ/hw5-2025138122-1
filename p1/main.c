@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <stdbool.h>
 
 int main(void)
 {
   int N = 0;
   bool found = false;
 
-  if (scanf("%d", &N) != 1) return 0;
+  (scanf("%d", &N);
 
   for(int a = 1; a <= N/ 900; a++)
     {
@@ -22,6 +21,7 @@ int main(void)
             }
         }
     }
-  if (found = false) {printf("none\n");}
+  if (!found)
+    printf("none\n");
   return 0;
 }
