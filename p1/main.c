@@ -11,7 +11,7 @@ int main(void)
     {
       for(int b = 2; a * 900 + b * 750 < N; b += 2)
         {
-          for(int c = 1; a * 900 + b * 750 + c * 250 < N; c++)
+          for(int c = 1; a * 900 + b * 750 + c * 200 <= N; c++)
             {
             if(900 * a + 750 * b + 200 * c == N && (c < a || c < b)) 
             {
