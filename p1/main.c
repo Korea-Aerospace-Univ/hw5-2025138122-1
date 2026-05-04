@@ -3,24 +3,24 @@
 int main(void)
 {
   int N = 0;
-  int found = 0;
+  bool found = false;
 
-  scanf("%d", &N);
+  if (scanf("%d", &N) != 1) return 0;
 
   for(int a = 1; a <= N/ 900; a++)
     {
-      for(int b = 1; b<= N / 750; b++)
+      for(int b = 2; a * 900 + b * 750 < N; b += 2)
         {
-          for(int c = 1; c <= N / 200; c++)
+          for(int c = 1; a * 900 + b * 750 + c * 250 < N; c++)
             {
-            if(900 * a + 750 * b + 200 * c == N&& b%2 == 0 && (c < a || c < b)) 
+            if(900 * a + 750 * b + 200 * c == N && (c < a || c < b)) 
             {
               printf("%d %d %d\n", a, b, c);
-              found = 1;
+              found = true;
             }
             }
         }
     }
-  if (found == 0) {printf("none\n");}
+  if (!found) {printf("none\n");}
   return 0;
 }
