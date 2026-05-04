@@ -5,9 +5,9 @@ int main(void)
   int N = 0;
   bool found = false;
 
-  scanf("%d", &N);
+  if (scanf("%d", &N) != 1) return 0;
 
-  for(int a = 1; a <= N/ 900; a++)
+  for(int a = 1; a * 900 < N; a++)
     {
       for(int b = 2; a * 900 + b * 750 < N; b += 2)
         {
@@ -21,7 +21,7 @@ int main(void)
             }
         }
     }
-  if (!found)
+  if (found == false)
     printf("none\n");
   return 0;
 }
