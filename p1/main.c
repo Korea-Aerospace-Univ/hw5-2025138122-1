@@ -21,6 +21,6 @@ int main(void)
             }
         }
     }
-  if (!found) {printf("none\n");}
+  if (found = false) {printf("none\n");}
   return 0;
 }
