@@ -5,7 +5,7 @@ int main(void)
   int N = 0;
   bool found = false;
 
-  (scanf("%d", &N);
+  scanf("%d", &N);
 
   for(int a = 1; a <= N/ 900; a++)
     {
